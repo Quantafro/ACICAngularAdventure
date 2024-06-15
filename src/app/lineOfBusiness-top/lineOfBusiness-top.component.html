@@ -1,0 +1,9 @@
+<h2>Top Lines of Business</h2>
+
+<ul class="lineOfBusiness-top">
+  <li *ngFor="let line of topLinesOfBusiness">
+    <a routerLink="/detail/{{line.businessId}}">
+      {{line.businessName}} ({{line.recentQuotes}} Recent Quotes)
+    </a>
+  </li>
+</ul>

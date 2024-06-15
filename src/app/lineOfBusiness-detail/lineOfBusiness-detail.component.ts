@@ -21,7 +21,9 @@ export class LineOfBusinessDetailComponent implements OnInit {
     private lineOfBusinessService: LineOfBusinessService,
     private recentQuoteService: RecentQuoteService,
     private location: Location
-  ) {}
+  ) {
+    this.route.paramMap.subscribe(() => this.ngOnInit());
+  }
 
   ngOnInit(): void {
     this.getLineOfBusiness();
